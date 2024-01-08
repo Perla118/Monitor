@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Monitor.Vista.Page1">
+
+    <StackLayout>
+        <Frame BackgroundColor="#7349bd" Padding="24" CornerRadius="0">
+            <Label Text="Propina" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <Label Text="Ingreso de el mondo total de la cuenta"/>
+        <Entry Placeholder="Monto total" Keyboard="Numeric" Text="{Binding Monto}"/>
+
+        <Label Text="Ingresar porcentaje a propina que deseas dejar"/>
+        <Entry Placeholder="Porcentaje(%)" Keyboard="Numeric" Text="{Binding Porcentaje}"/>
+
+        <Label Text="Numero de personas que comparten la cuenta"/>
+        <Entry Placeholder="Personas" Keyboard="Numeric" Text="{Binding Personas}"/>
+
+        <Label Text="Total a pagar"/>
+        <Label Text="{Binding Totalpagar}"/>
+
+        <Label Text="Monto a pagar por persona"/>
+        <Label Text="{Binding Personascuenta}"/>
+
+        <Button Text="Propina" Command="{Binding btnBotoncommand}" CornerRadius="15" BackgroundColor="#ceb4f8"/>
+
+        <Image Source="feli.jpg" IsVisible="{Binding feli}"/>
+        <Image Source="tiste.jpg" IsVisible="{Binding triste}"/>
+    </StackLayout>
+</ContentPage>
